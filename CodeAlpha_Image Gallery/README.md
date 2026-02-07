@@ -16,7 +16,7 @@ It features a masonry-style layout, infinite scrolling, fullscreen lightbox view
 - 👤 Frontend **login & signup UI**
 - 🗂️ Profile modal with liked & saved collections
 - 💾 Data persistence using **localStorage**
-- ⬇️ Download images
+- ⬇️ Download images button
 - 🔝 Back-to-top button
 - 📱 Fully responsive across devices
 
@@ -31,7 +31,5 @@ It features a masonry-style layout, infinite scrolling, fullscreen lightbox view
 - **Picsum Photos API**
 - **LocalStorage**
 
----
 
-## 📂 Project Structure
 
