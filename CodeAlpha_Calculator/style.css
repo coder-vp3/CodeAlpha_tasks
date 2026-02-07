@@ -1,0 +1,173 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background and typography */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f7;
+    padding: 20px;
+}
+
+/* Calculator shell */
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    animation: slideUp 0.4s ease-out;
+}
+
+/* Soft entrance animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Display area styling */
+.display-container {
+    background: #1c1c1e;
+    padding: 35px 25px;
+    color: white;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/* Prior expression line */
+.expression {
+    font-size: 1rem;
+    opacity: 0.7;
+    min-height: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Main result line */
+.result {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: right;
+    word-wrap: break-word;
+    max-width: 100%;
+    line-height: 1;
+}
+
+/* Grid for all keys */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #e0e0e0;
+    padding: 0;
+}
+
+/* Base button look */
+.btn {
+    background: #fff;
+    border: none;
+    padding: 28px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    outline: none;
+}
+
+/* Press and hover states */
+.btn:active {
+    transform: scale(0.97);
+    background: #f5f5f5;
+}
+
+.btn:hover {
+    background: #fafafa;
+}
+
+/* Color treatments for operator and utility keys */
+.operator {
+    color: #ff9500;
+    font-weight: 500;
+}
+
+.operator:active {
+    background: #fff5eb;
+}
+
+.special {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.special:active {
+    background: #f8f9fa;
+}
+
+/* Primary call-to-action key */
+.equals {
+    background: #ff9500;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    grid-column: 4 / 5;
+}
+
+.equals:hover {
+    background: #e68600;
+}
+
+.equals:active {
+    transform: scale(0.97);
+    background: #cc7700;
+}
+
+/* Wide zero key */
+.zero {
+    grid-column: span 2;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    .calculator {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .display-container {
+        padding: 30px 20px;
+        min-height: 120px;
+    }
+
+    .result {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        padding: 24px;
+        font-size: 1.3rem;
+    }
+
+    .equals {
+        font-size: 1.6rem;
+    }
+}
