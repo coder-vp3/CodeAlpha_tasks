@@ -22,7 +22,7 @@ The project focuses on a clean user interface, smooth interactions, and full key
 
 - **HTML5** – Structure of the calculator
 - **CSS3** – Styling, layout, animations, and responsiveness
-- **JavaScript ** – Calculator logic and keyboard handling
+- **JavaScript** – Calculator logic and keyboard handling
 
 
 
